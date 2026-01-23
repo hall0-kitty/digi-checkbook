@@ -1,3 +1,3 @@
-A clean budget tracker to help give clarity into personal spending
+A clean budget tracker to help provide clarity into personal spending
 
 # digi-checkbook
