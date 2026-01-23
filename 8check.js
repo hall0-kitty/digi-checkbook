@@ -21,5 +21,6 @@ const shouldHave = [
 const couldHave = [
     "1. Monthly comparisons",
     "2. Budget planning",
-    "3. Export to PDF"
+    "3. Export to PDF",
+    "4. have additional smaller goals"
 ];
