@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Checkbook</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Budget Calculator</title>
+    </head>
+        <body>
 
-<body>
-    <header>
-        <div class="app">
-            <h1>The Budget</h1>
-            <input type="number" id="income">
-            <input type="text" id="expense-name">
-            <input type="number" id="expense-amount">
-            <button>Add Expense</button>
-            <ul id="expense-list"></ul>
-            <div id="results"></div>
-        </div>
-    </header>
-    <main class="container">
-        <section class="card" id="input-section">
-        </section>
-    </main>
-</body>
+            <h1>Budget Calculator</h1>
+
+                <!-- INCOME SECTION -->
+            <h2>Income</h2>
+                <div>
+                    <label for="income">Monthly Income:</label>
+                    <input type="number" id="income" placeholder="e.g., 3000">
+                </div>
+
+                <!-- FIXED COSTS SECTION -->
+            <h2>Fixed Costs</h2>
+    
+                <div>
+                    <label for="housing">Housing:</label>
+                    <input type="number" id="housing" placeholder="0">
+                </div>
+    
+                <div>
+                    <label for="utilities">Utilities:</label>
+                    <input type="number" id="utilities" placeholder="0">
+                </div>
+    
+                <div>
+                    <label for="transportation">Transportation:</label>
+                    <input type="number" id="transportation" placeholder="0">
+                </div>
+
+                <!-- PERCENTAGES SECTION -->
+            <h2>Allocation Percentages (must add to 100%)</h2>
+    
+                <div>
+                    <label for="foodPct">Food %:</label>
+                    <input type="number" id="foodPct" placeholder="0" min="0" max="100">
+                </div>
+    
+                <div>
+                    <label for="savingsPct">Savings %:</label>
+                    <input type="number" id="savingsPct" placeholder="0" min="0" max="100">
+                </div>
+    
+                <div>
+                    <label for="cryptoPct">Crypto %:</label>
+                    <input type="number" id="cryptoPct" placeholder="0" min="0" max="100">
+                </div>
+    
+                <div>
+                    <label for="funPct">Fun %:</label>
+                    <input type="number" id="funPct" placeholder="0" min="0" max="100">
+                </div>
+
+                <!-- CALCULATE BUTTON -->
+                <div>
+                    <button onclick="calculateBudget()">Calculate Budget</button>
+                </div>
+
+                <!-- RESULTS SECTION -->
+                <h2>Your Budget Breakdown</h2>
+    
+                <div>
+                    <p>Food: $<span id="foodAmount">0.00</span></p>
+                </div>
+    
+                <div>
+                    <p>Savings: $<span id="savingsAmount">0.00</span></p>
+                </div>
+    
+                <div>
+                    <p>Crypto: $<span id="cryptoAmount">0.00</span></p>
+                </div>
+    
+                <div>
+                    <p>Fun: $<span id="funAmount">0.00</span></p>
+                </div>
+
+                <!-- ERROR MESSAGE -->
+                <div>
+                    <p id="errorMsg" style="color: red;"></p>
+                </div>
+
+    </body>
 </html>
